@@ -2,8 +2,8 @@ import "./index.scss";
 
 import cloak from './assets/svg/rewindOff.svg'
 import rewind from './assets/svg/rewindOff.svg'
-import play from 'assets/svg/playOff.svg'
-import forward from 'assets/svg/forwardOff.svg'
+import play from './assets/svg/playOff.svg'
+import forward from './assets/svg/forwardOff.svg'
 
 document.querySelector('#app').innerHTML = ` 
   <div class="divBackgroundImg">  
