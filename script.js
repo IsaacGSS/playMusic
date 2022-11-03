@@ -34,6 +34,12 @@ document.querySelector('#app').innerHTML = `
         <img id="forward" src="${forward}" alt=""> 
       </span> 
 
-  </div> 
-  `;
+  </div> `;
 
+  const playoff = document.querySelector('.icon #play');
+  playoff.addEventListener("click", () => {
+
+    console.log("dsad");
+  })
+
+  
