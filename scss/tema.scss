@@ -1,0 +1,12 @@
+// tema flex
+@mixin flex($centralization: center) {
+  display: flex;
+  justify-content: $centralization;
+  align-items: center;
+}
+
+// tema flex em coluna
+@mixin flex-Column($centralization: center, $direction: column) {
+  @include flex($centralization);
+  flex-direction: $direction;
+}
