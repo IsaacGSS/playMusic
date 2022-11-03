@@ -1,6 +1,6 @@
 import "./index.scss";
 
-import cloak from './assets/svg/rewindOff.svg'
+import cloak from './assets/img/NoRoleModelz.jpeg'
 import rewind from './assets/svg/rewindOff.svg'
 import play from './assets/svg/playOff.svg'
 import forward from './assets/svg/forwardOff.svg'
