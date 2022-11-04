@@ -1,4 +1,4 @@
-import "./index.scss";
+import "./style.scss";
 
 import cloak from './assets/img/NoRoleModelz.jpeg'
 import rewind from './assets/svg/rewindOff.svg'

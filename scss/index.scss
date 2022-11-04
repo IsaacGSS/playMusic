@@ -1,6 +1,6 @@
-@import "./component_Style/paleta.scss";
-@import "./component_Style/respons.scss";
-@import "./component_Style/tema.scss";
+@import "_palette";
+@import "_respons";
+@import "_theme";
 
 body {
     @include flex;
