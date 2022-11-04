@@ -3,7 +3,19 @@ import "./index.scss";
 import cloak from './assets/img/NoRoleModelz.jpeg'
 import rewind from './assets/svg/rewindOff.svg'
 import play from './assets/svg/playOff.svg'
+import pause from './assets/svg/pauseOff.svg'
 import forward from './assets/svg/forwardOff.svg'
+import audio2 from './assets/music/NoRoleModelz.mp3'
+
+let player = play
+
+function button(e) {
+  player = e
+  console.log(player);
+  return
+}
+
+
 
 document.querySelector('#app').innerHTML = ` 
   <div class="divBackgroundImg">  
@@ -28,18 +40,33 @@ document.querySelector('#app').innerHTML = `
         <img id="rewind" src="${rewind}" alt=""> 
       </span> 
       <span class="icon"> 
-        <img id="play" src="${play}" alt=""> 
+        <img id="play" src="${player}" alt=""> 
       </span> 
       <span class="icon"> 
         <img id="forward" src="${forward}" alt=""> 
       </span> 
 
+      <audio >
+        <source id="mus" src="${audio2}" type="audio/mpeg">
+      </audio>
+
   </div> `;
 
-  const playoff = document.querySelector('.icon #play');
-  playoff.addEventListener("click", () => {
-
-    console.log("dsad");
-  })
-
+  let buttonPlayPause = document.querySelector('#play')
   
+  buttonPlayPause.addEventListener("click", (e) => {
+    const audioOn = document.querySelector('audio')
+    let buttonPlayPauseId = buttonPlayPause.id
+
+    if (buttonPlayPauseId === "play") {
+      audioOn.play();
+      document.getElementById(`${buttonPlayPauseId}`).id = "pause"
+      console.log(buttonPlayPauseId);
+      button(pause)
+      return
+    } 
+    audioOn.pause();
+    document.getElementById(`${buttonPlayPauseId}`).id = "play"
+      button(play)
+      console.log(buttonPlayPauseId);
+  })
